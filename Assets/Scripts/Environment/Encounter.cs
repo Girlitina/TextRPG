@@ -120,5 +120,10 @@ namespace TextRPG
             player.Investigate();
 
         }
+
+        public void Inventory()
+        {
+
+        }
     }
 }
