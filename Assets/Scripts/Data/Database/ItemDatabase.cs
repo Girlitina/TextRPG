@@ -2,26 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TextRPG
+public class ItemDatabase : MonoBehaviour
 {
-    public class ItemDatabase : MonoBehaviour
-    {
-        public List<string> Items { get; set; } = new List<string>();
-        public static ItemDatabase Instance { get; private set; }
+    public List<Item> items = new List<Item>();
 
-        private void Awake()
+    void Awake()
+    {
+        BuildItemDatabase();
+    }
+
+    public Item GetItem(int id)
+    {
+        return items.Find(item => item.id == id);
+    }
+
+    public Item GetItem(string title)
+    {
+        return items.Find(item => item.title == title);
+    }
+
+    void BuildItemDatabase()
+    {
+        items = new List<Item>()
         {
-            if (Instance != null && Instance != this)  
-            {
-                Destroy(this.gameObject);
-            }
-            else
-            {
-                Instance = this;
-            }
-            Items.Add("Emerald Slippers");
-            Items.Add("Empty chalice");
-            Items.Add("Bowtie");
-        }
+            new Item(1, "Diamod Sword", "Sword made of diamond",
+            new Dictionary<string, int> {
+                { "Power", 15}
+            }),
+            new Item(2, "Diamod Ore", "Shiny diamond",
+            new Dictionary<string, int> {
+                { "Value", 250}
+            }),
+            new Item(3, "Iron Sword", "Sword made of iron",
+            new Dictionary<string, int> {
+                { "Power", 8},
+                { "Defense", 10 }
+            })
+        };
     }
 }

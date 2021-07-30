@@ -100,7 +100,7 @@ namespace TextRPG
 
         public void AddItem(int item)
         {
-            Inventory.Add(ItemDatabase.Instance.Items[item]);
+            //Inventory.Add(ItemDatabase.Instance.Items[item]);
             UIController.OnPlayerInventoryChange();
         }
 
