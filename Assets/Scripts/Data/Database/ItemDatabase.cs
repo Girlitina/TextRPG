@@ -25,15 +25,16 @@ public class ItemDatabase : MonoBehaviour
     {
         items = new List<Item>()
         {
-            new Item(1, "Diamod Sword", "Sword made of diamond",
+            new Item(1, "Diamond Axe", "Sword made of diamond",
             new Dictionary<string, int> {
-                { "Power", 15}
+                { "Power", 15},
+                { "Defense", 7 }
             }),
-            new Item(2, "Diamod Ore", "Shiny diamond",
+            new Item(2, "Diamond Ore", "Shiny diamond",
             new Dictionary<string, int> {
                 { "Value", 250}
             }),
-            new Item(3, "Iron Sword", "Sword made of iron",
+            new Item(3, "Iron Axe", "Sword made of iron",
             new Dictionary<string, int> {
                 { "Power", 8},
                 { "Defense", 10 }
