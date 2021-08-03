@@ -24,6 +24,7 @@ public class Item
         this.id = item.id;
         this.title = item.title;
         this.description = item.description;
+        this.icon = item.icon;
         this.stats = item.stats;
     }
 }
