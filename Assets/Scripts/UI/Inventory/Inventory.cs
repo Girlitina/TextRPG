@@ -18,6 +18,8 @@ namespace TextRPG
         private void Start()
         {
             GiveItem(1);
+            GiveItem(2);
+            GiveItem(3);
         }
 
         public void GiveItem(int id)
