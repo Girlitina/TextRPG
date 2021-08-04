@@ -11,6 +11,7 @@ public class UIItem : MonoBehaviour, IPointerDownHandler
     private UIItem selectedItem;
     public bool craftingSlot = false;
     private CraftingSlot craftingSlots;
+    public bool craftedItemSlot = false;
 
     private void Awake()
     {
@@ -42,7 +43,7 @@ public class UIItem : MonoBehaviour, IPointerDownHandler
     {
         if (this.item != null)
         {
-            if (selectedItem.item != null)
+            if (selectedItem.item != null && !craftedItemSlot)
             {
                 Item clone = new Item(selectedItem.item);
                 selectedItem.UpdateItem(this.item);
@@ -52,9 +53,13 @@ public class UIItem : MonoBehaviour, IPointerDownHandler
             {
                 selectedItem.UpdateItem(this.item);
                 UpdateItem(null);
+                if (craftedItemSlot)
+                {
+                    GetComponent<UICraftResult>().CollectCraftResult();
+                }
             }
         }
-        else if (selectedItem.item != null)
+        else if (selectedItem.item != null && !craftedItemSlot)
         {
             UpdateItem(selectedItem.item);
             selectedItem.UpdateItem(null);

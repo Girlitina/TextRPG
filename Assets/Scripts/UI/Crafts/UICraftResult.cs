@@ -13,4 +13,11 @@ public class UICraftResult : MonoBehaviour, IPointerDownHandler
         slotPanel.EmptyAllSlots();
         inventory.playerItems.Add(GetComponent<UIItem>().item);
     }
+
+    public void CollectCraftResult()
+    {
+        slotPanel.EmptyAllSlots();
+        inventory.playerItems.Add(GetComponent<UIItem>().item);
+    }
+
 }

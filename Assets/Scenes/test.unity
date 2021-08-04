@@ -3349,6 +3349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   craftingSlot: 0
+  craftedItemSlot: 0
 --- !u!114 &1510431179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4270,6 +4271,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 804465314}
     m_Modifications:
+    - target: {fileID: 5933089811698379304, guid: 293edb5a88636e44c8fdaad3a3657e28, type: 3}
+      propertyPath: craftedItemSlot
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6525446436257294804, guid: 293edb5a88636e44c8fdaad3a3657e28, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
