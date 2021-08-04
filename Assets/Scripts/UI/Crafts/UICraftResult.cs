@@ -3,16 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UICraftResult : MonoBehaviour, IPointerDownHandler
+public class UICraftResult : MonoBehaviour
 {
     public SlotPanel slotPanel;
     public Inventory inventory;
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        slotPanel.EmptyAllSlots();
-        inventory.playerItems.Add(GetComponent<UIItem>().item);
-    }
 
     public void CollectCraftResult()
     {
