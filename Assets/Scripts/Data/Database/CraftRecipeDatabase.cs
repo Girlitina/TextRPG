@@ -18,7 +18,7 @@ public class CraftRecipeDatabase : MonoBehaviour
     {
         foreach (CraftRecipe craftRecipe in recipes)
         {
-            if (craftRecipe.requiredItems.SequenceEqual(recipe))
+            if (craftRecipe.requiredItems.OrderBy(i => i).SequenceEqual(recipe.OrderBy(i => i)))
             {
                 return ItemDatabase.GetItem(craftRecipe.itemToCraft);
             }
@@ -34,7 +34,7 @@ public class CraftRecipeDatabase : MonoBehaviour
             new int[] {
                 0,0,0,
                 0,2,0,
-                0,0,0
+                0,3,0
             }),
             new CraftRecipe(2,
             new int[] {
