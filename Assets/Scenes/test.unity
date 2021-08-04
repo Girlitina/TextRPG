@@ -3349,7 +3349,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   craftingSlot: 0
-  craftingSlots: {fileID: 0}
 --- !u!114 &1510431179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4396,6 +4395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotPanel: {fileID: 213564270}
+  inventory: {fileID: 1893854453}
 --- !u!114 &1927452577 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5933089811698379304, guid: 293edb5a88636e44c8fdaad3a3657e28, type: 3}
