@@ -34,6 +34,10 @@ public class SlotPanel : MonoBehaviour
         UpdateSlot(uiItems.FindIndex(i => i.item == item), null);
     }
 
+    public void EmptyAllSlots()
+    {
+        uiItems.ForEach(i => i.UpdateItem(null));
+    }
     public bool ContainsEmptySlot()
     {
         foreach (UIItem uii in uiItems)

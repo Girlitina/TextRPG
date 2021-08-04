@@ -9,9 +9,12 @@ public class UIItem : MonoBehaviour, IPointerDownHandler
     public Item item;
     private Image spriteImage;
     private UIItem selectedItem;
+    public bool craftingSlot = false;
+    private CraftingSlot craftingSlots;
 
     private void Awake()
     {
+        craftingSlots = FindObjectOfType<CraftingSlot>();
         selectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
         spriteImage = GetComponent<Image>();
         UpdateItem(null);
@@ -28,6 +31,10 @@ public class UIItem : MonoBehaviour, IPointerDownHandler
         else
         {
             spriteImage.color = Color.clear;
+        }
+        if (craftingSlot)
+        {
+            craftingSlots.UpdateRecipe();
         }
     }
 
