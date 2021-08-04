@@ -33,8 +33,6 @@ public class UIItem : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.LogError("Clicked!");
-
         if (this.item != null)
         {
             if (selectedItem.item != null)
