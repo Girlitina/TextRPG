@@ -38,6 +38,19 @@ public class ItemDatabase : MonoBehaviour
             new Dictionary<string, int> {
                 { "Power", 8},
                 { "Defense", 10 }
+            }),
+            new Item(4, "Fish", "This is salmon",
+            new Dictionary<string, int> {
+                { "Energy", 5}
+            }),
+            new Item(5, "Cooked Fish", "Delicious salmon! Yummy",
+            new Dictionary<string, int> {
+                { "Energy", 10}
+            }),
+            new Item(6, "Silver Axe", "Axe made of silver",
+            new Dictionary<string, int> {
+                { "Power", 11},
+                { "Defense", 13}
             })
         };
     }

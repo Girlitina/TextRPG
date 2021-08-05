@@ -26,7 +26,6 @@ namespace TextRPG
         public virtual void Die()
         {
             Debug.Log("Character has died!");
-            Debug.Log("Huy");
         }
     }
 }
